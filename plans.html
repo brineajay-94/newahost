@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plans | Newa Host</title>
 
+    <!-- ================= PRIMARY META TAGS ================= -->
+    <title>Plans | Newa Host – Minecraft Server Hosting Plans India</title>
+    <meta name="title" content="Plans | Newa Host – Minecraft Server Hosting Plans India">
+    <meta name="description" content="Choose from Newa Host's affordable Minecraft server hosting plans. Budget and performance series with DDR5 memory, powerful CPUs, NVMe SSD, and locations in India & Singapore. Starting at ₹60/month.">
+    <meta name="keywords" content="Minecraft server hosting plans, Newa Host plans, Minecraft hosting India, budget Minecraft server, performance Minecraft hosting, Minecraft VPS, game server plans">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Newa Host">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#0d0f1a">
+
+    <!-- ================= CANONICAL URL ================= -->
+    <link rel="canonical" href="https://newahost.com/plans.html">
+
+    <!-- ================= FAVICON ================= -->
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/logo.png">
+    <link rel="apple-touch-icon" href="/assets/logo.png">
+
+    <!-- ================= OPEN GRAPH / FACEBOOK ================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://newahost.com/plans.html">
+    <meta property="og:title" content="Minecraft Server Hosting Plans | Newa Host">
+    <meta property="og:description" content="Explore affordable Minecraft server hosting plans at Newa Host. Budget and performance series, DDR5 memory, NVMe SSD, starting ₹60/month.">
+    <meta property="og:image" content="https://newahost.com/assets/logo.png">
+    <meta property="og:site_name" content="Newa Host">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ================= TWITTER CARD ================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://newahost.com/plans.html">
+    <meta name="twitter:title" content="Minecraft Server Hosting Plans | Newa Host">
+    <meta name="twitter:description" content="Choose from Newa Host's Minecraft server plans. Budget, performance, and Intel VMs. Starting at ₹60/month.">
+    <meta name="twitter:image" content="https://newahost.com/assets/logo.png">
+
+    <!-- ================= STRUCTURED DATA: BREADCRUMB ================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://newahost.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Plans",
+                "item": "https://newahost.com/plans.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ================= STRUCTURED DATA: PRODUCT / OFFER ================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Newa Host Minecraft Server Hosting Plans",
+        "description": "Budget and performance Minecraft server hosting plans with DDR5 memory, powerful CPUs, NVMe SSD storage. Locations in India and Singapore. Prices from ₹60/month.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Newa Host"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "60",
+            "highPrice": "2850",
+            "offerCount": "15",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <!-- ================= FONTS ================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        /* ===== YOUR EXACT CSS REMAINS UNCHANGED ===== */
         :root {
             --bg: #0d0f1a;
             --bg-elevated: #12152a;
@@ -804,308 +883,310 @@
 <body>
 
     <!-- HEADER (EXACTLY AS INDEX) -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="index.html" class="brand">
-                <img src="/assets/logo.png" alt="Newa Host Logo" class="brand-logo">
+            <a href="index.html" class="brand" aria-label="Newa Host Homepage">
+                <img src="/assets/logo.png" alt="Newa Host Logo - Minecraft Server Hosting" class="brand-logo" width="38" height="38">
                 <span class="brand-text">Newa<span>Host</span></span>
             </a>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="plans.html" class="nav-link active">Plans</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="plans.html" class="nav-link active" role="menuitem" aria-current="page">Plans</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="infrastructure.html" class="nav-link" role="menuitem">Infrastructure</a></li>
             </ul>
 
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- HERO SECTION (contains breadcrumb absolutely positioned top-left) -->
-    <div class="plans-hero">
-        <div class="breadcrumb">
-            <a href="index.html">
-                <i class="fas fa-home"></i>
-                Home
-            </a>
-            <span class="separator">/</span>
-            <span class="current">Plans</span>
-        </div>
-
-        <div class="plans-hero-content">
-            <h2>Choose Your Perfect Plan</h2>
-            <p>Simple pricing, powerful hardware, no hidden fees.</p>
-        </div>
-    </div>
-
-    <!-- PLANS SECTION -->
-    <div class="section">
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="showCategory('budget', this)">Budget Series</button>
-            <button class="tab-btn" onclick="showCategory('performance', this)">Performance Series</button>
-            <button class="tab-btn" onclick="showCategory('intel', this)">Intel Standard VMs</button>
-        </div>
-
-        <!-- Budget Series -->
-        <div id="budget" class="plan-grid active">
-            <div class="plan-card">
-                <div class="plan-name">Budget 1</div>
-                <div class="plan-price">
-                    <span class="amount">₹60</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 115</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>4 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>100% CPU</li>
-                    <li><i class="fas fa-hdd"></i>20 GB SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Singapore</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Budget 1', '₹60')">Order Now</button>
+    <main>
+        <section class="plans-hero" aria-label="Plans hero section">
+            <div class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    Home
+                </a>
+                <span class="separator">/</span>
+                <span class="current">Plans</span>
             </div>
 
-            <div class="plan-card">
-                <div class="plan-name">Budget 2</div>
-                <div class="plan-price">
-                    <span class="amount">₹120</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 235</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>8 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>150% CPU</li>
-                    <li><i class="fas fa-hdd"></i>30 GB SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Singapore</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Budget 2', '₹120')">Order Now</button>
+            <div class="plans-hero-content">
+                <h1>Choose Your Perfect Minecraft Hosting Plan</h1>
+                <p>Simple pricing, powerful hardware, no hidden fees.</p>
+            </div>
+        </section>
+
+        <!-- PLANS SECTION -->
+        <section class="section" aria-label="Minecraft hosting plan options">
+            <div class="tabs-container" role="tablist" aria-label="Plan categories">
+                <button class="tab-btn active" role="tab" aria-selected="true" onclick="showCategory('budget', this)">Budget Series</button>
+                <button class="tab-btn" role="tab" aria-selected="false" onclick="showCategory('performance', this)">Performance Series</button>
+                <button class="tab-btn" role="tab" aria-selected="false" onclick="showCategory('intel', this)">Intel Standard VMs</button>
             </div>
 
-            <div class="plan-card popular">
-                <div class="popular-badge">Most Popular</div>
-                <div class="plan-name">Budget 3</div>
-                <div class="plan-price">
-                    <span class="amount">₹240</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 345</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>12 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>200% CPU</li>
-                    <li><i class="fas fa-hdd"></i>40 GB SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Singapore</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Budget 3', '₹240')">Order Now</button>
+            <!-- Budget Series -->
+            <div id="budget" class="plan-grid active" role="tabpanel" aria-label="Budget series plans">
+                <article class="plan-card">
+                    <div class="plan-name">Budget 1</div>
+                    <div class="plan-price">
+                        <span class="amount">₹60</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 115</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>4 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>100% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>20 GB SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Singapore</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Budget 1', '₹60')" aria-label="Order Budget 1 plan">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Budget 2</div>
+                    <div class="plan-price">
+                        <span class="amount">₹120</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 235</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>8 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>150% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>30 GB SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Singapore</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Budget 2', '₹120')" aria-label="Order Budget 2 plan">Order Now</button>
+                </article>
+
+                <article class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Budget 3</div>
+                    <div class="plan-price">
+                        <span class="amount">₹240</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 345</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>12 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>200% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>40 GB SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Singapore</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Budget 3', '₹240')" aria-label="Order Budget 3 plan - Most Popular">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Budget 4</div>
+                    <div class="plan-price">
+                        <span class="amount">₹340</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 490</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>16 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>300% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>50 GB SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Singapore</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Budget 4', '₹340')" aria-label="Order Budget 4 plan">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Budget 5</div>
+                    <div class="plan-price">
+                        <span class="amount">₹540</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 840</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>32 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>400% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>60 GB SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Singapore</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Budget 5', '₹540')" aria-label="Order Budget 5 plan">Order Now</button>
+                </article>
             </div>
 
-            <div class="plan-card">
-                <div class="plan-name">Budget 4</div>
-                <div class="plan-price">
-                    <span class="amount">₹340</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 490</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>16 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>300% CPU</li>
-                    <li><i class="fas fa-hdd"></i>50 GB SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Singapore</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Budget 4', '₹340')">Order Now</button>
+            <!-- Performance Series -->
+            <div id="performance" class="plan-grid" role="tabpanel" aria-label="Performance series plans">
+                <article class="plan-card">
+                    <div class="plan-name">Koili</div>
+                    <div class="plan-price">
+                        <span class="amount">₹120</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 180</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>4 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>100% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>15 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Koili', '₹120')" aria-label="Order Koili plan">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Danfe</div>
+                    <div class="plan-price">
+                        <span class="amount">₹240</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 380</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>6 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>200% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>20 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Danfe', '₹240')" aria-label="Order Danfe plan">Order Now</button>
+                </article>
+
+                <article class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Giddha</div>
+                    <div class="plan-price">
+                        <span class="amount">₹280</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 440</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>8 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>250% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>30 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Giddha', '₹280')" aria-label="Order Giddha plan - Most Popular">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Hiran</div>
+                    <div class="plan-price">
+                        <span class="amount">₹390</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 620</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>12 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>300% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>35 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Hiran', '₹390')" aria-label="Order Hiran plan">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Chituwa</div>
+                    <div class="plan-price">
+                        <span class="amount">₹560</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 890</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>16 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>400% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>40 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Chituwa', '₹560')" aria-label="Order Chituwa plan">Order Now</button>
+                </article>
+
+                <article class="plan-card">
+                    <div class="plan-name">Khukra</div>
+                    <div class="plan-price">
+                        <span class="amount">₹1200</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 1850</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>32 GB RAM</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>600% CPU</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>60 GB Disk</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Mumbai, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Khukra', '₹1200')" aria-label="Order Khukra plan">Order Now</button>
+                </article>
             </div>
 
-            <div class="plan-card">
-                <div class="plan-name">Budget 5</div>
-                <div class="plan-price">
-                    <span class="amount">₹540</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 840</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>32 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>400% CPU</li>
-                    <li><i class="fas fa-hdd"></i>60 GB SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Singapore</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Budget 5', '₹540')">Order Now</button>
-            </div>
-        </div>
+            <!-- Intel Standard VMs -->
+            <div id="intel" class="plan-grid" role="tabpanel" aria-label="Intel Standard VM plans">
+                <article class="plan-card">
+                    <div class="plan-name">Platinum 8</div>
+                    <div class="plan-price">
+                        <span class="amount">₹490</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 790</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>8 GB DDR4</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>2 vCores</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>80 GB NVMe SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Delhi, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Platinum 8', '₹490')" aria-label="Order Platinum 8 plan">Order Now</button>
+                </article>
 
-        <!-- Performance Series -->
-        <div id="performance" class="plan-grid">
-            <div class="plan-card">
-                <div class="plan-name">Koili</div>
-                <div class="plan-price">
-                    <span class="amount">₹120</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 180</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>4 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>100% CPU</li>
-                    <li><i class="fas fa-hdd"></i>15 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Koili', '₹120')">Order Now</button>
-            </div>
+                <article class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Platinum 16</div>
+                    <div class="plan-price">
+                        <span class="amount">₹890</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 1450</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>16 GB DDR4</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>6 vCores</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>150 GB NVMe SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Delhi, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Platinum 16', '₹890')" aria-label="Order Platinum 16 plan - Most Popular">Order Now</button>
+                </article>
 
-            <div class="plan-card">
-                <div class="plan-name">Danfe</div>
-                <div class="plan-price">
-                    <span class="amount">₹240</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 380</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>6 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>200% CPU</li>
-                    <li><i class="fas fa-hdd"></i>20 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Danfe', '₹240')">Order Now</button>
-            </div>
+                <article class="plan-card">
+                    <div class="plan-name">Platinum 32</div>
+                    <div class="plan-price">
+                        <span class="amount">₹1750</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 2800</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>32 GB DDR4</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>8 vCores</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>300 GB NVMe SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Delhi, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Platinum 32', '₹1750')" aria-label="Order Platinum 32 plan">Order Now</button>
+                </article>
 
-            <div class="plan-card popular">
-                <div class="popular-badge">Most Popular</div>
-                <div class="plan-name">Giddha</div>
-                <div class="plan-price">
-                    <span class="amount">₹280</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 440</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>8 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>250% CPU</li>
-                    <li><i class="fas fa-hdd"></i>30 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Giddha', '₹280')">Order Now</button>
+                <article class="plan-card">
+                    <div class="plan-name">Platinum 64</div>
+                    <div class="plan-price">
+                        <span class="amount">₹2850</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-npr">NPR 4550</div>
+                    <ul class="plan-specs">
+                        <li><i class="fas fa-memory" aria-hidden="true"></i>64 GB DDR4</li>
+                        <li><i class="fas fa-microchip" aria-hidden="true"></i>12 vCores</li>
+                        <li><i class="fas fa-hdd" aria-hidden="true"></i>400 GB NVMe SSD</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Delhi, India</li>
+                    </ul>
+                    <button class="plan-btn" onclick="confirmRedirect('Platinum 64', '₹2850')" aria-label="Order Platinum 64 plan">Order Now</button>
+                </article>
             </div>
-
-            <div class="plan-card">
-                <div class="plan-name">Hiran</div>
-                <div class="plan-price">
-                    <span class="amount">₹390</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 620</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>12 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>300% CPU</li>
-                    <li><i class="fas fa-hdd"></i>35 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Hiran', '₹390')">Order Now</button>
-            </div>
-
-            <div class="plan-card">
-                <div class="plan-name">Chituwa</div>
-                <div class="plan-price">
-                    <span class="amount">₹560</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 890</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>16 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>400% CPU</li>
-                    <li><i class="fas fa-hdd"></i>40 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Chituwa', '₹560')">Order Now</button>
-            </div>
-
-            <div class="plan-card">
-                <div class="plan-name">Khukra</div>
-                <div class="plan-price">
-                    <span class="amount">₹1200</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 1850</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>32 GB RAM</li>
-                    <li><i class="fas fa-microchip"></i>600% CPU</li>
-                    <li><i class="fas fa-hdd"></i>60 GB Disk</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Mumbai, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Khukra', '₹1200')">Order Now</button>
-            </div>
-        </div>
-
-        <!-- Intel Standard VMs -->
-        <div id="intel" class="plan-grid">
-            <div class="plan-card">
-                <div class="plan-name">Platinum 8</div>
-                <div class="plan-price">
-                    <span class="amount">₹490</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 790</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>8 GB DDR4</li>
-                    <li><i class="fas fa-microchip"></i>2 vCores</li>
-                    <li><i class="fas fa-hdd"></i>80 GB NVMe SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Delhi, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Platinum 8', '₹490')">Order Now</button>
-            </div>
-
-            <div class="plan-card popular">
-                <div class="popular-badge">Most Popular</div>
-                <div class="plan-name">Platinum 16</div>
-                <div class="plan-price">
-                    <span class="amount">₹890</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 1450</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>16 GB DDR4</li>
-                    <li><i class="fas fa-microchip"></i>6 vCores</li>
-                    <li><i class="fas fa-hdd"></i>150 GB NVMe SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Delhi, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Platinum 16', '₹890')">Order Now</button>
-            </div>
-
-            <div class="plan-card">
-                <div class="plan-name">Platinum 32</div>
-                <div class="plan-price">
-                    <span class="amount">₹1750</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 2800</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>32 GB DDR4</li>
-                    <li><i class="fas fa-microchip"></i>8 vCores</li>
-                    <li><i class="fas fa-hdd"></i>300 GB NVMe SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Delhi, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Platinum 32', '₹1750')">Order Now</button>
-            </div>
-
-            <div class="plan-card">
-                <div class="plan-name">Platinum 64</div>
-                <div class="plan-price">
-                    <span class="amount">₹2850</span>
-                    <span class="period">/month</span>
-                </div>
-                <div class="plan-npr">NPR 4550</div>
-                <ul class="plan-specs">
-                    <li><i class="fas fa-memory"></i>64 GB DDR4</li>
-                    <li><i class="fas fa-microchip"></i>12 vCores</li>
-                    <li><i class="fas fa-hdd"></i>400 GB NVMe SSD</li>
-                    <li><i class="fas fa-map-marker-alt"></i>Delhi, India</li>
-                </ul>
-                <button class="plan-btn" onclick="confirmRedirect('Platinum 64', '₹2850')">Order Now</button>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- MODAL -->
     <div id="confirm-modal" class="overlay" onclick="closeModal()">
-        <div id="confirm-modal-box" class="modal" onclick="event.stopPropagation()">
-            <h3>Are you sure?</h3>
+        <div id="confirm-modal-box" class="modal" onclick="event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h3 id="modal-title">Are you sure?</h3>
             <p id="confirm-text">Are you sure you want to open the external link?</p>
             <div class="modal-buttons">
                 <button class="modal-btn modal-btn-cancel" onclick="closeModal()">Cancel</button>
@@ -1114,37 +1195,37 @@
         </div>
     </div>
 
-    <!-- FOOTER (EXACTLY AS INDEX WITH PAYMENT METHODS) -->
-    <footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
         <div class="footer-container">
             <div class="footer-brand-text">
                 <div class="footer-brand">
-                    <i class="fas fa-cube"></i>
+                    <i class="fas fa-cube" aria-hidden="true"></i>
                     <span>Newa Host</span>
                 </div>
-                <p>Premium Minecraft hosting powered by reliable India infrastructure.</p>
+                <p>Premium <strong>Minecraft server hosting</strong> powered by reliable India infrastructure. Affordable plans with DDR5 memory and NVMe SSD.</p>
             </div>
 
             <div class="footer-col">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="plans.html">Plans</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="index.html" aria-label="Newa Host Home">Home</a></li>
+                    <li><a href="plans.html" aria-label="Newa Host Minecraft hosting plans">Plans</a></li>
+                    <li><a href="contact.html" aria-label="Contact Newa Host">Contact</a></li>
+                    <li><a href="infrastructure.html" aria-label="Newa Host infrastructure details">Infrastructure</a></li>
                 </ul>
 
                 <h4 style="margin-top: 24px;">Payment Methods</h4>
-                <div class="payment-icons">
-                    <span class="payment-icon"><img src="https://i.ibb.co/3YP6ZD6g/lg-688f0d8712ef1-UPI-Unified-Payments.webp" alt="UPI"></span>
-                    <span class="payment-icon"><img src="https://i.ibb.co/fdyFwKzr/esewa-logo.png" alt="eSewa"></span>
-                    <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                <div class="payment-icons" aria-label="Accepted payment methods">
+                    <span class="payment-icon"><img src="https://i.ibb.co/3YP6ZD6g/lg-688f0d8712ef1-UPI-Unified-Payments.webp" alt="UPI Payment" loading="lazy" width="48" height="24"></span>
+                    <span class="payment-icon"><img src="https://i.ibb.co/fdyFwKzr/esewa-logo.png" alt="eSewa Payment" loading="lazy" width="48" height="24"></span>
+                    <span class="payment-icon"><i class="fas fa-credit-card" aria-label="Credit Card Payment"></i></span>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            &copy; 2026 Newa Host. All rights reserved.
+            &copy; 2026 Newa Host – Premium Minecraft Server Hosting India. All rights reserved.
         </div>
     </footer>
 
@@ -1159,8 +1240,10 @@
             const tabs = document.getElementsByClassName('tab-btn');
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('active');
+                tabs[i].setAttribute('aria-selected', 'false');
             }
             btnElement.classList.add('active');
+            btnElement.setAttribute('aria-selected', 'true');
         }
 
         function confirmRedirect(planName, planPrice) {
@@ -1182,7 +1265,8 @@
 
         window.toggleMenu = function () {
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('open');
+            const expanded = navLinks.classList.toggle('open');
+            document.querySelector('.hamburger').setAttribute('aria-expanded', expanded);
         };
 
         document.addEventListener('click', function (event) {
@@ -1194,6 +1278,7 @@
                 !hamburger.contains(event.target)
             ) {
                 navLinks.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
 
@@ -1202,6 +1287,7 @@
                 const navLinks = document.getElementById('navLinks');
                 if (navLinks.classList.contains('open')) {
                     navLinks.classList.remove('open');
+                    document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
                 }
             });
         });

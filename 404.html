@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Page Not Found | Newa Host</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0d0f1a;
+            --bg-elevated: #12152a;
+            --surface: #191d38;
+            --surface-hover: #1e2345;
+            --border: #252a4a;
+            --border-light: #2e3460;
+            --blue-50: #eef2ff;
+            --blue-100: #dbe4ff;
+            --blue-200: #c7d2fe;
+            --blue-300: #a5b4fc;
+            --blue-400: #818cf8;
+            --blue-500: #6366f1;
+            --blue-600: #4f46e5;
+            --blue-700: #4338ca;
+            --blue-800: #3730a3;
+            --blue-900: #312e81;
+            --text-primary: #e8ecf8;
+            --text-secondary: #a8b3cf;
+            --text-muted: #6b7494;
+            --text-faint: #4a5268;
+            --white: #ffffff;
+            --green: #23a559;
+            --terminal-bg: #0a0c14;
+            --terminal-border: #1a1f3a;
+            --terminal-text: #d4d9e8;
+            --terminal-green: #4ade80;
+            --terminal-blue: #60a5fa;
+            --terminal-yellow: #fbbf24;
+            --terminal-red: #f87171;
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.45);
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 20px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(13, 15, 26, 0.92);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            height: 68px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            margin-right: auto;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .brand-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.4px;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            color: var(--blue-400);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2px;
+        }
+
+        .nav-links li {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            transition: color 0.2s, background 0.2s;
+            letter-spacing: 0.1px;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        .nav-link.active {
+            color: var(--blue-300);
+            font-weight: 600;
+            background: transparent;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 12px;
+            right: 12px;
+            height: 2px;
+            background: var(--blue-400);
+            border-radius: 2px 2px 0 0;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.35rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            transition: color 0.2s, background 0.2s;
+            margin-left: 8px;
+        }
+
+        .hamburger:hover {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        /* 404 SECTION */
+        .error-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-content {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-family: var(--font-mono);
+            font-size: 7rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--blue-400) 0%, var(--blue-600) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+        }
+
+        .error-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .error-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 26px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.25s;
+            cursor: pointer;
+            letter-spacing: 0.1px;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--blue-600);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--blue-700);
+            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+            border: 1px solid var(--border-light);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--blue-400);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        /* Terminal Box */
+        .terminal-box {
+            background: var(--terminal-bg);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: left;
+            max-width: 480px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--terminal-border);
+        }
+
+        .terminal-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .terminal-dot.red { background: #ff5f57; }
+        .terminal-dot.yellow { background: #febc2e; }
+        .terminal-dot.green { background: #28c840; }
+
+        .terminal-box p {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+
+        .terminal-box .command {
+            color: var(--terminal-green);
+            font-weight: 500;
+        }
+
+        .terminal-box .error {
+            color: var(--terminal-red);
+            font-weight: 500;
+        }
+
+        .terminal-box .info {
+            color: var(--terminal-blue);
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0c18;
+            color: var(--text-secondary);
+            padding: 48px 24px 20px;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            color: var(--white);
+            letter-spacing: -0.3px;
+        }
+
+        .footer-brand i {
+            color: var(--blue-400);
+            font-size: 1.3rem;
+        }
+
+        .footer-brand-text p {
+            font-size: 0.85rem;
+            opacity: 0.75;
+            font-weight: 400;
+            margin-top: 10px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-muted);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col ul li a::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-faint);
+            transition: background 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--blue-300);
+        }
+
+        .footer-col ul li a:hover::before {
+            background: var(--blue-400);
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .payment-icon {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 24px;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .payment-icon img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-top: 36px;
+            font-size: 0.8rem;
+            color: var(--text-faint);
+            letter-spacing: 0.2px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--bg-elevated);
+                padding: 12px 16px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+                z-index: 999;
+                gap: 2px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                width: 100%;
+                padding: 10px 14px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-link.active::after {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .brand-text {
+                font-size: 1.15rem;
+            }
+
+            .brand-logo {
+                height: 34px;
+            }
+
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .error-title {
+                font-size: 1.7rem;
+            }
+
+            .error-text {
+                font-size: 0.95rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .footer-col h4 {
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 16px;
+                height: 60px;
+            }
+
+            .nav-links {
+                top: 60px;
+            }
+
+            .brand-text {
+                font-size: 1.05rem;
+            }
+
+            .brand-logo {
+                height: 30px;
+            }
+
+            .error-code {
+                font-size: 4rem;
+            }
+
+            .error-section {
+                padding: 40px 16px;
+            }
+
+            .footer {
+                padding: 36px 16px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="/assets/logo.png" alt="Newa Host Logo" class="brand-logo">
+                <span class="brand-text">Newa<span>Host</span></span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plans.html" class="nav-link">Plans</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+            </ul>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= 404 CONTENT ================= -->
+    <div class="error-section">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Chunk Not Found</h1>
+            <p class="error-text">
+                We couldn't locate the page you were looking for. 
+                The connection might be lost, or the page may have been moved.
+            </p>
+            
+            <div class="error-buttons">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i>
+                    Return to Home
+                </a>
+                <a href="plans.html" class="btn-secondary">
+                    <i class="fas fa-box-open"></i>
+                    View Hosting Plans
+                </a>
+            </div>
+
+            <!-- Terminal Style Error Box -->
+            <div class="terminal-box">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <p><span class="command">$ ping newahost.com/404</span></p>
+                <p><span class="info">PING newahost.com (::1) 56(84) bytes of data.</span></p>
+                <p><span class="error">ERROR: Could not resolve host: 'newa-h0st.com/404'</span></p>
+                <p><span class="error">ERROR: Chunk not found in world 'web'</span></p>
+                <p><span class="info">Retrying connection...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand -->
+            <div class="footer-brand-text">
+                <div class="footer-brand">
+                    <i class="fas fa-cube"></i>
+                    <span>Newa Host</span>
+                </div>
+                <p>Premium Minecraft hosting powered by reliable India infrastructure.</p>
+            </div>
+
+            <!-- Navigation & Payment Methods -->
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                </ul>
+
+                <h4 style="margin-top: 24px;">Payment Methods</h4>
+                <div class="payment-icons">
+                    <span class="payment-icon"><img src="https://i.ibb.co/3YP6ZD6g/lg-688f0d8712ef1-UPI-Unified-Payments.webp" alt="UPI"></span>
+                    <span class="payment-icon"><img src="https://i.ibb.co/fdyFwKzr/esewa-logo.png" alt="eSewa"></span>
+                    <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Newa Host. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ================= MOBILE MENU TOGGLE ================= -->
+    <script>
+        window.toggleMenu = function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        };
+
+        document.addEventListener('click', function (event) {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (
+                navLinks.classList.contains('open') &&
+                !navLinks.contains(event.target) &&
+                !hamburger.contains(event.target)
+            ) {
+                navLinks.classList.remove('open');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

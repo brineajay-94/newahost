@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newahost.bond/sitemap.xml
+
+Website Developed by BrineTeam
+
+BrineTeam [CEO] BrineAjay
+
+Visit: https://ajaykafle.com.np
