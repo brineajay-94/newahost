@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Newa Host</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0d0f1a;
+            --bg-elevated: #12152a;
+            --surface: #191d38;
+            --surface-hover: #1e2345;
+            --border: #252a4a;
+            --border-light: #2e3460;
+            --blue-50: #eef2ff;
+            --blue-100: #dbe4ff;
+            --blue-200: #c7d2fe;
+            --blue-300: #a5b4fc;
+            --blue-400: #818cf8;
+            --blue-500: #6366f1;
+            --blue-600: #4f46e5;
+            --blue-700: #4338ca;
+            --blue-800: #3730a3;
+            --blue-900: #312e81;
+            --text-primary: #e8ecf8;
+            --text-secondary: #a8b3cf;
+            --text-muted: #6b7494;
+            --text-faint: #4a5268;
+            --white: #ffffff;
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.45);
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 20px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(13, 15, 26, 0.92);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            height: 68px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            margin-right: auto;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .brand-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.4px;
+            line-height: 1;
+        }
+
+        .brand-text span {
+            color: var(--blue-400);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2px;
+        }
+
+        .nav-links li {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            transition: color 0.2s, background 0.2s;
+            letter-spacing: 0.1px;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        .nav-link.active {
+            color: var(--blue-300);
+            font-weight: 600;
+            background: transparent;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 12px;
+            right: 12px;
+            height: 2px;
+            background: var(--blue-400);
+            border-radius: 2px 2px 0 0;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.35rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            transition: color 0.2s, background 0.2s;
+            margin-left: 8px;
+        }
+
+        .hamburger:hover {
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        /* HERO SECTION */
+        .contact-hero {
+            position: relative;
+            background-image: linear-gradient(135deg, rgba(13, 15, 26, 0.85) 0%, rgba(30, 42, 110, 0.75) 100%),
+                              url('/assets/index_bg.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: var(--blue-300);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--white);
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-muted);
+        }
+
+        .breadcrumb .current {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 80px 20px 40px;
+            color: #fff;
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .contact-hero-content h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            color: var(--white);
+        }
+
+        .contact-hero-content > p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 64px 24px 80px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Owner Card */
+        .owner-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: border-color 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .owner-card:hover {
+            border-color: var(--blue-500);
+            box-shadow: var(--shadow-md);
+        }
+
+        .owner-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--blue-500);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+        }
+
+        .owner-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.3px;
+            margin-bottom: 4px;
+        }
+
+        .owner-title {
+            font-size: 0.9rem;
+            color: var(--blue-400);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .owner-bio {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Discord Invite Card */
+        .discord-invite-wrap {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .invite-card {
+            width: 432px;
+            max-width: 100%;
+            background: #2b2d31;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow:
+                0 8px 24px rgba(0,0,0,.45),
+                0 2px 6px rgba(0,0,0,.25);
+            border: none;
+        }
+
+        .banner {
+            width: 100%;
+            height: 120px;
+            position: relative;
+            overflow: hidden;
+            background: #1e1f22;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .invite-content {
+            position: relative;
+            padding: 52px 16px 16px;
+        }
+
+        .server-icon {
+            position: absolute;
+            top: -36px;
+            left: 16px;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 6px solid #2b2d31;
+            background: #111214;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        }
+
+        .server-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .server-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f2f3f5;
+            margin-bottom: 4px;
+        }
+
+        .discord-desc {
+            font-size: 14px;
+            line-height: 20px;
+            color: #b5bac1;
+            margin-bottom: 16px;
+        }
+
+        .discord-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #b5bac1;
+            margin-bottom: 16px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #23a559;
+        }
+
+        .join-btn {
+            width: 100%;
+            height: 44px;
+            border: none;
+            border-radius: 3px;
+            background: #5865f2;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .15s ease, transform .15s ease;
+            font-family: var(--font-sans);
+        }
+
+        .join-btn:hover {
+            background: #4752c4;
+        }
+
+        .join-btn:active {
+            transform: scale(.985);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0c18;
+            color: var(--text-secondary);
+            padding: 48px 24px 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            font-size: 1.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            color: var(--white);
+            letter-spacing: -0.3px;
+        }
+
+        .footer-brand i {
+            color: var(--blue-400);
+            font-size: 1.3rem;
+        }
+
+        .footer-brand-text p {
+            font-size: 0.85rem;
+            opacity: 0.75;
+            font-weight: 400;
+            margin-top: 10px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-muted);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-col ul li a::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-faint);
+            transition: background 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--blue-300);
+        }
+
+        .footer-col ul li a:hover::before {
+            background: var(--blue-400);
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .payment-icon {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 24px;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .payment-icon img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-top: 36px;
+            font-size: 0.8rem;
+            color: var(--text-faint);
+            letter-spacing: 0.2px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+
+            .discord-invite-wrap {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                background: var(--bg-elevated);
+                padding: 12px 16px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+                z-index: 999;
+                gap: 2px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-link {
+                display: block;
+                width: 100%;
+                padding: 10px 14px;
+                border-radius: var(--radius-sm);
+            }
+
+            .nav-link.active::after {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .brand-text {
+                font-size: 1.15rem;
+            }
+
+            .brand-logo {
+                height: 34px;
+            }
+
+            .contact-hero {
+                min-height: 240px;
+            }
+
+            .breadcrumb {
+                top: 15px;
+                left: 16px;
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .contact-hero-content {
+                padding: 70px 16px 30px;
+            }
+
+            .contact-hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .contact-hero-content > p {
+                font-size: 1rem;
+            }
+
+            .contact-section {
+                padding: 40px 16px 60px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 16px;
+                height: 60px;
+            }
+
+            .nav-links {
+                top: 60px;
+            }
+
+            .brand-text {
+                font-size: 1.05rem;
+            }
+
+            .brand-logo {
+                height: 30px;
+            }
+
+            .contact-hero {
+                min-height: 200px;
+            }
+
+            .contact-hero-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .owner-avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .invite-card {
+                width: 100%;
+            }
+
+            .banner {
+                height: 105px;
+            }
+
+            .invite-content {
+                padding-top: 50px;
+            }
+
+            .footer {
+                padding: 36px 16px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="/assets/logo.png" alt="Newa Host Logo" class="brand-logo">
+                <span class="brand-text">Newa<span>Host</span></span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plans.html" class="nav-link">Plans</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+            </ul>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="contact-hero">
+        <div class="breadcrumb">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <span class="separator">/</span>
+            <span class="current">Contact</span>
+        </div>
+
+        <div class="contact-hero-content">
+            <h2>Get in Touch</h2>
+            <p>We're here to help you with your Minecraft hosting needs.</p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="contact-section">
+        <div class="contact-grid">
+            <!-- Owner Card -->
+            <div class="owner-card">
+                <img src="https://i.ibb.co/mrhSfQ2D/mrkhukraoffical-avatar-1024.png" alt="Mr. Khukra - Owner" class="owner-avatar">
+                <h3 class="owner-name">Mr. Khukra</h3>
+                <div class="owner-title">Founder &amp; Owner</div>
+                <p class="owner-bio">
+                    Passionate about gaming infrastructure and dedicated to providing the best Minecraft hosting experience in India.
+                    Your trusted partner for reliable servers and support.
+                </p>
+            </div>
+
+            <!-- Discord Invite Card -->
+            <div class="discord-invite-wrap">
+                <div class="invite-card">
+                    <div class="banner">
+                        <img
+                            src="https://i.ibb.co/bgWbMF8W/file-00000000d16481fab2bebfab65e90653.png"
+                            alt="Newa Host Discord Banner"
+                        >
+                    </div>
+
+                    <div class="invite-content">
+                        <div class="server-icon">
+                            <img
+                                src="https://i.ibb.co/01CV9DR/Chat-GPT-Image-Sep-4-2026-02-11-37-PM.png"
+                                alt="Newa Host"
+                            >
+                        </div>
+
+                        <div class="server-name">
+                            Newa Host
+                        </div>
+
+                        <div class="discord-desc">
+                            Nepal's hosting community. Minecraft hosting,
+                            VPS, servers and more.
+                        </div>
+
+                        <div class="discord-status">
+                            <span class="status-dot"></span>
+                            Join the Newa Host community
+                        </div>
+
+                        <button
+                            class="join-btn"
+                            onclick="window.open('https://discord.gg/RfF5Umpwpw', '_blank')"
+                        >
+                            Join Server
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand-text">
+                <div class="footer-brand">
+                    <i class="fas fa-cube"></i>
+                    <span>Newa Host</span>
+                </div>
+                <p>Premium Minecraft hosting powered by reliable India infrastructure.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                </ul>
+
+                <h4 style="margin-top: 24px;">Payment Methods</h4>
+                <div class="payment-icons">
+                    <span class="payment-icon"><img src="https://i.ibb.co/3YP6ZD6g/lg-688f0d8712ef1-UPI-Unified-Payments.webp" alt="UPI"></span>
+                    <span class="payment-icon"><img src="https://i.ibb.co/fdyFwKzr/esewa-logo.png" alt="eSewa"></span>
+                    <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Newa Host. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        window.toggleMenu = function () {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        };
+
+        document.addEventListener('click', function (event) {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            if (
+                navLinks.classList.contains('open') &&
+                !navLinks.contains(event.target) &&
+                !hamburger.contains(event.target)
+            ) {
+                navLinks.classList.remove('open');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
