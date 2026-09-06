@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Newa Host</title>
+    <title>Infrastructure | Newa Host</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
@@ -33,6 +33,16 @@
             --text-muted: #6b7494;
             --text-faint: #4a5268;
             --white: #ffffff;
+            --green: #23a559;
+            --green-bright: #2ecc71;
+            --terminal-bg: #0a0c14;
+            --terminal-border: #1a1f3a;
+            --terminal-text: #d4d9e8;
+            --terminal-green: #4ade80;
+            --terminal-blue: #60a5fa;
+            --terminal-yellow: #fbbf24;
+            --terminal-orange: #fb923c;
+            --terminal-red: #f87171;
             --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
             --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
@@ -42,6 +52,7 @@
             --radius-lg: 14px;
             --radius-xl: 20px;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
         }
 
         * {
@@ -181,7 +192,7 @@
         }
 
         /* HERO SECTION */
-        .contact-hero {
+        .infra-hero {
             position: relative;
             background-image: linear-gradient(135deg, rgba(13, 15, 26, 0.85) 0%, rgba(30, 42, 110, 0.75) 100%),
                               url('/assets/index_bg.png');
@@ -236,7 +247,7 @@
             font-weight: 600;
         }
 
-        .contact-hero-content {
+        .infra-hero-content {
             position: relative;
             z-index: 1;
             padding: 80px 20px 40px;
@@ -246,7 +257,7 @@
             margin: 0 auto;
         }
 
-        .contact-hero-content h2 {
+        .infra-hero-content h2 {
             font-size: 2.8rem;
             font-weight: 800;
             line-height: 1.2;
@@ -255,187 +266,165 @@
             color: var(--white);
         }
 
-        .contact-hero-content > p {
+        .infra-hero-content > p {
             font-size: 1.2rem;
             color: var(--text-secondary);
         }
 
-        /* CONTACT SECTION */
-        .contact-section {
+        /* INFRASTRUCTURE SECTION */
+        .infra-section {
             padding: 64px 24px 80px;
             max-width: 1240px;
             margin: 0 auto;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
+        .section-header {
+            text-align: center;
+            margin-bottom: 44px;
         }
 
-        /* Owner Card */
-        .owner-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 32px 28px;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
+        .section-header h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: -0.6px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        .section-divider {
+            width: 40px;
+            height: 3px;
+            background: var(--blue-500);
+            border-radius: 2px;
+            margin: 16px auto 0;
+        }
+
+        /* TERMINAL GRID */
+        .terminal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            width: 100%;
+        }
+
+        /* TERMINAL CARD */
+        .terminal-card {
+            background: var(--terminal-bg);
+            border: 1px solid var(--terminal-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
             transition: border-color 0.25s, box-shadow 0.25s;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
-        .owner-card:hover {
+        .terminal-card:hover {
             border-color: var(--blue-500);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-lg);
         }
 
-        .owner-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid var(--blue-500);
-            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
-        }
-
-        .owner-name {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: -0.3px;
-            margin-bottom: 4px;
-        }
-
-        .owner-title {
-            font-size: 0.9rem;
-            color: var(--blue-400);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .owner-bio {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Discord Invite Card */
-        .discord-invite-wrap {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .invite-card {
-            width: 432px;
-            max-width: 100%;
-            background: #2b2d31;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow:
-                0 8px 24px rgba(0,0,0,.45),
-                0 2px 6px rgba(0,0,0,.25);
-            border: none;
-        }
-
-        .banner {
-            width: 100%;
-            height: 120px;
-            position: relative;
-            overflow: hidden;
-            background: #1e1f22;
-        }
-
-        .banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .invite-content {
-            position: relative;
-            padding: 52px 16px 16px;
-        }
-
-        .server-icon {
-            position: absolute;
-            top: -36px;
-            left: 16px;
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            border: 6px solid #2b2d31;
-            background: #111214;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,.3);
-        }
-
-        .server-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .server-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #f2f3f5;
-            margin-bottom: 4px;
-        }
-
-        .discord-desc {
-            font-size: 14px;
-            line-height: 20px;
-            color: #b5bac1;
-            margin-bottom: 16px;
-        }
-
-        .discord-status {
+        .terminal-header {
+            background: #111422;
+            padding: 12px 16px;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 13px;
-            color: #b5bac1;
-            margin-bottom: 16px;
+            border-bottom: 1px solid var(--terminal-border);
         }
 
-        .status-dot {
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .terminal-dot.red { background: #ff5f57; }
+        .terminal-dot.yellow { background: #febc2e; }
+        .terminal-dot.green { background: #28c840; }
+
+        .terminal-title {
+            margin-left: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            font-family: var(--font-mono);
+        }
+
+        .terminal-body {
+            padding: 20px 18px 18px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .terminal-line {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            line-height: 1.75;
+            color: var(--terminal-text);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            white-space: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .terminal-line::-webkit-scrollbar {
+            display: none;
+        }
+
+        .terminal-label {
+            color: var(--terminal-blue);
+            font-weight: 600;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        .terminal-value {
+            color: var(--terminal-green);
+            font-weight: 500;
+        }
+
+        .terminal-node {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--terminal-border);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--terminal-yellow);
+            font-weight: 600;
+        }
+
+        .terminal-node .online-dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #23a559;
+            background: var(--green);
+            animation: pulse-online 2s infinite ease-in-out;
         }
 
-        .join-btn {
-            width: 100%;
-            height: 44px;
-            border: none;
-            border-radius: 3px;
-            background: #5865f2;
-            color: white;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background .15s ease, transform .15s ease;
-            font-family: var(--font-sans);
+        @keyframes pulse-online {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
 
-        .join-btn:hover {
-            background: #4752c4;
-        }
-
-        .join-btn:active {
-            transform: scale(.985);
-        }
-
-        /* FOOTER */
+        /* FOOTER - stacked layout */
         .footer {
             background: #0a0c18;
             color: var(--text-secondary);
@@ -446,10 +435,13 @@
         .footer-container {
             max-width: 1240px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 40px;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .footer-brand-text {
+            text-align: left;
         }
 
         .footer-brand {
@@ -472,9 +464,12 @@
             font-size: 0.85rem;
             opacity: 0.75;
             font-weight: 400;
-            margin-top: 10px;
             color: var(--text-muted);
             line-height: 1.7;
+        }
+
+        .footer-col {
+            text-align: left;
         }
 
         .footer-col h4 {
@@ -554,7 +549,7 @@
             text-align: center;
             border-top: 1px solid var(--border);
             padding-top: 20px;
-            margin-top: 36px;
+            margin-top: 32px;
             font-size: 0.8rem;
             color: var(--text-faint);
             letter-spacing: 0.2px;
@@ -562,18 +557,14 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            .contact-grid {
+            .terminal-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                max-width: 600px;
+                margin: 0 auto;
             }
 
             .footer-container {
-                grid-template-columns: 1fr 1fr;
-                gap: 28px;
-            }
-
-            .discord-invite-wrap {
-                justify-content: center;
+                gap: 24px;
             }
         }
 
@@ -624,7 +615,7 @@
                 height: 34px;
             }
 
-            .contact-hero {
+            .infra-hero {
                 min-height: 240px;
             }
 
@@ -635,25 +626,32 @@
                 padding: 6px 12px;
             }
 
-            .contact-hero-content {
+            .infra-hero-content {
                 padding: 70px 16px 30px;
             }
 
-            .contact-hero-content h2 {
+            .infra-hero-content h2 {
                 font-size: 2rem;
             }
 
-            .contact-hero-content > p {
+            .infra-hero-content > p {
                 font-size: 1rem;
             }
 
-            .contact-section {
+            .infra-section {
                 padding: 40px 16px 60px;
             }
 
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 24px;
+            .terminal-body {
+                padding: 16px 14px 14px;
+            }
+
+            .terminal-line {
+                font-size: 0.72rem;
+            }
+
+            .footer {
+                padding: 36px 16px 16px;
             }
         }
 
@@ -675,33 +673,29 @@
                 height: 30px;
             }
 
-            .contact-hero {
+            .infra-hero {
                 min-height: 200px;
             }
 
-            .contact-hero-content h2 {
+            .infra-hero-content h2 {
                 font-size: 1.8rem;
             }
 
-            .owner-avatar {
-                width: 100px;
-                height: 100px;
+            .section-header h2 {
+                font-size: 1.45rem;
             }
 
-            .invite-card {
-                width: 100%;
+            .terminal-title {
+                font-size: 0.7rem;
             }
 
-            .banner {
-                height: 105px;
+            .terminal-label {
+                min-width: 60px;
+                font-size: 0.7rem;
             }
 
-            .invite-content {
-                padding-top: 50px;
-            }
-
-            .footer {
-                padding: 36px 16px 16px;
+            .terminal-value {
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -720,8 +714,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="plans.html" class="nav-link">Plans</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="infrastructure.html" class="nav-link active">Infrastructure</a></li>
             </ul>
 
             <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
@@ -731,74 +725,171 @@
     </nav>
 
     <!-- HERO -->
-    <div class="contact-hero">
+    <div class="infra-hero">
         <div class="breadcrumb">
             <a href="index.html">
                 <i class="fas fa-home"></i>
                 Home
             </a>
             <span class="separator">/</span>
-            <span class="current">Contact</span>
+            <span class="current">Infrastructure</span>
         </div>
 
-        <div class="contact-hero-content">
-            <h2>Get in Touch</h2>
-            <p>We're here to help you with your Minecraft hosting needs.</p>
+        <div class="infra-hero-content">
+            <h2>Our Infrastructure</h2>
+            <p>Premium hardware powering your Minecraft experience.</p>
         </div>
     </div>
 
-    <!-- CONTENT -->
-    <div class="contact-section">
-        <div class="contact-grid">
-            <!-- Owner Card -->
-            <div class="owner-card">
-                <img src="https://i.ibb.co/mrhSfQ2D/mrkhukraoffical-avatar-1024.png" alt="Mr. Khukra - Owner" class="owner-avatar">
-                <h3 class="owner-name">Mr. Khukra</h3>
-                <div class="owner-title">Founder &amp; Owner</div>
-                <p class="owner-bio">
-                    Passionate about gaming infrastructure and dedicated to providing the best Minecraft hosting experience in India.
-                    Your trusted partner for reliable servers and support.
-                </p>
+    <!-- INFRASTRUCTURE TERMINAL -->
+    <div class="infra-section">
+        <div class="section-header">
+            <h2>Node Specifications</h2>
+            <p>Live server infrastructure overview</p>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="terminal-grid">
+            <!-- Performance-1 -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Performance-1</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-label">CPU:</span>
+                        <span class="terminal-value">AMD EPYC 7R13 (4) @ 3.199GHz</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Cores:</span>
+                        <span class="terminal-value">4 Physical, 8 Threads</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">RAM:</span>
+                        <span class="terminal-value">16GB</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Disk:</span>
+                        <span class="terminal-value">512GB NVMe SSD</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Location:</span>
+                        <span class="terminal-value">India</span>
+                    </div>
+                    <div class="terminal-node">
+                        <span class="online-dot"></span>
+                        Node: Performance-1 [ONLINE]
+                    </div>
+                </div>
             </div>
 
-            <!-- Discord Invite Card -->
-            <div class="discord-invite-wrap">
-                <div class="invite-card">
-                    <div class="banner">
-                        <img
-                            src="https://i.ibb.co/bgWbMF8W/file-00000000d16481fab2bebfab65e90653.png"
-                            alt="Newa Host Discord Banner"
-                        >
+            <!-- Performance-2 -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Performance-2</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-label">CPU:</span>
+                        <span class="terminal-value">AMD EPYC 7R13 (4) @ 3.199GHz</span>
                     </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Cores:</span>
+                        <span class="terminal-value">4 Physical, 8 Threads</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">RAM:</span>
+                        <span class="terminal-value">16GB</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Disk:</span>
+                        <span class="terminal-value">512GB NVMe SSD</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Location:</span>
+                        <span class="terminal-value">India</span>
+                    </div>
+                    <div class="terminal-node">
+                        <span class="online-dot"></span>
+                        Node: Performance-2 [ONLINE]
+                    </div>
+                </div>
+            </div>
 
-                    <div class="invite-content">
-                        <div class="server-icon">
-                            <img
-                                src="https://i.ibb.co/01CV9DR/Chat-GPT-Image-Sep-4-2026-02-11-37-PM.png"
-                                alt="Newa Host"
-                            >
-                        </div>
+            <!-- Budget-1 -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Budget-1</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-label">CPU:</span>
+                        <span class="terminal-value">AMD EPYC 9J14 (8) @ 2.596GHz</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Cores:</span>
+                        <span class="terminal-value">8 Physical, 16 Threads</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">RAM:</span>
+                        <span class="terminal-value">24GB</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Disk:</span>
+                        <span class="terminal-value">512GB NVMe SSD</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Location:</span>
+                        <span class="terminal-value">India</span>
+                    </div>
+                    <div class="terminal-node">
+                        <span class="online-dot"></span>
+                        Node: Budget-1 [ONLINE]
+                    </div>
+                </div>
+            </div>
 
-                        <div class="server-name">
-                            Newa Host
-                        </div>
-
-                        <div class="discord-desc">
-                            Nepal's hosting community. Minecraft hosting,
-                            VPS, servers and more.
-                        </div>
-
-                        <div class="discord-status">
-                            <span class="status-dot"></span>
-                            Join the Newa Host community
-                        </div>
-
-                        <button
-                            class="join-btn"
-                            onclick="window.open('https://discord.gg/RfF5Umpwpw', '_blank')"
-                        >
-                            Join Server
-                        </button>
+            <!-- Budget-2 -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Budget-2</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-label">CPU:</span>
+                        <span class="terminal-value">Intel Xeon Platinum 8488C (8) @ 3.400GHz</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Cores:</span>
+                        <span class="terminal-value">8 Physical, 16 Threads</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">RAM:</span>
+                        <span class="terminal-value">64GB</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Disk:</span>
+                        <span class="terminal-value">1TB NVMe SSD</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-label">Location:</span>
+                        <span class="terminal-value">Singapore</span>
+                    </div>
+                    <div class="terminal-node">
+                        <span class="online-dot"></span>
+                        Node: Budget-2 [ONLINE]
                     </div>
                 </div>
             </div>
